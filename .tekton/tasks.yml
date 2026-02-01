@@ -38,7 +38,7 @@ spec:
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
-metedata:
+metadata:
   name: nose
 spec:
   description: This task will run nose tests
@@ -47,7 +47,7 @@ spec:
   params:
     - name: args
       description: Arguments to pass to nose
-      type: starting
+      type: string
       default: "-v"
   steps:
     - name: nosetests
